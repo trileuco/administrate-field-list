@@ -1,1 +1,11 @@
-<%= field.to_s %>
+<ul>
+  <% field.to_a.each do |item| %>
+    <li>
+      <% if item.to_s =~ URI::regexp %>
+        <%= link_to item, item %>
+      <% else %>
+        <%= item.to_s %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
