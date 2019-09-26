@@ -2,7 +2,7 @@
   <% field.values.each do |item| %>
     <li>
       <% if item.to_s =~ URI::regexp %>
-        <%= link_to item, item %>
+        <%= link_to item, item, target: "_blank" %>
       <% else %>
         <%= item.to_s %>
       <% end %>
