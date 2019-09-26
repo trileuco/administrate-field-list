@@ -1,5 +1,5 @@
 <ul>
-  <% field.to_a.each do |item| %>
+  <% field.values.each do |item| %>
     <li>
       <% if item.to_s =~ URI::regexp %>
         <%= link_to item, item %>
